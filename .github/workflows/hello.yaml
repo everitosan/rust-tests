@@ -10,8 +10,11 @@ jobs:
     runs-on: ubuntu-22.04
     container: rust:1.64.0-slim
     steps:
-      - uses: actions/checkout@v2
+      - name: Fetch code
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: first step
+      - name: Print
         run: echo "Starting tests" && ls
+      - name: Exec tests
+        run: cargo test
