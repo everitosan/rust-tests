@@ -1,0 +1,13 @@
+name: hello
+
+on: 
+  push:
+    branches:
+    - main
+
+jobs:
+  tests:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: first step
+        run: echo "Starting tests"
